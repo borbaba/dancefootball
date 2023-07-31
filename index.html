@@ -2,24 +2,25 @@
 <html>
 <head>
     <title>Federación de Dance Football</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        const noticias = [
+            { titulo: "¡Dance Football llega a Latinoamérica!", descripcion: "La Federación de Dance Football ha anunciado su expansión a Latinoamérica, comenzando por México y Brasil." },
+            { titulo: "El equipo de NY gana la copa Dance Football 2023", descripcion: "En una emocionante final, el equipo de NY venció a LA en la Copa Dance Football 2023." },
+            { titulo: "Nuevas reglas en Dance Football", descripcion: "La Federación de Dance Football ha anunciado ajustes a las reglas del juego para hacerlo aún más emocionante." },
+            // ... añadir más noticias aquí
+        ];
+        let indiceNoticia = 0;
+        function actualizarNoticia() {
+            const noticia = noticias[indiceNoticia];
+            document.getElementById('tituloNoticia').innerText = noticia.titulo;
+            document.getElementById('descripcionNoticia').innerText = noticia.descripcion;
+            indiceNoticia = (indiceNoticia + 1) % noticias.length;
         }
-
-        .header {
-            background-color: #f8f9fa;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .content {
-            margin: 20px;
-            line-height: 1.6;
-        }
-    </style>
+        setInterval(actualizarNoticia, 30000);
+    </script>
 </head>
-<body>
+<body onload="actualizarNoticia()">
     <div class="header">
         <h1>Federación de Dance Football</h1>
     </div>
@@ -29,6 +30,10 @@
         <h3>Reglas del juego</h3>
         <p>Entra aquí para ver las <a href="rules.html">reglas oficiales del Dance Football</a>.</p>
         <h3>Noticias</h3>
+        <div id="news">
+            <h4 id="tituloNoticia"></h4>
+            <p id="descripcionNoticia"></p>
+        </div>
         <p>Mantente al día con las últimas <a href="news.html">noticias de Dance Football</a>.</p>
     </div>
 </body>
