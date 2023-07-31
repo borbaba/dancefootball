@@ -2,39 +2,51 @@
 <html>
 <head>
     <title>Federación de Dance Football</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        const noticias = [
-            { titulo: "¡Dance Football llega a Latinoamérica!", descripcion: "La Federación de Dance Football ha anunciado su expansión a Latinoamérica, comenzando por México y Brasil." },
-            { titulo: "El equipo de NY gana la copa Dance Football 2023", descripcion: "En una emocionante final, el equipo de NY venció a LA en la Copa Dance Football 2023." },
-            { titulo: "Nuevas reglas en Dance Football", descripcion: "La Federación de Dance Football ha anunciado ajustes a las reglas del juego para hacerlo aún más emocionante." },
-            // ... añadir más noticias aquí
-        ];
-        let indiceNoticia = 0;
-        function actualizarNoticia() {
-            const noticia = noticias[indiceNoticia];
-            document.getElementById('tituloNoticia').innerText = noticia.titulo;
-            document.getElementById('descripcionNoticia').innerText = noticia.descripcion;
-            indiceNoticia = (indiceNoticia + 1) % noticias.length;
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 5rem;
         }
-        setInterval(actualizarNoticia, 30000);
+        .starter-template {
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+    </style>
+    <script>
+        var newsIndex = 0;
+        var news = [
+            "Dance Football hace su debut en el Estadio Olímpico",
+            "El equipo de Dance Football de Nueva York gana el campeonato nacional",
+            "Las estrellas del ballet clásico se unen al Dance Football",
+            "Se anuncian las nuevas reglas de Dance Football para la próxima temporada"
+        ];
+
+        function changeNews() {
+            document.getElementById('news').innerHTML = news[newsIndex];
+            newsIndex = (newsIndex + 1) % news.length;
+        }
+
+        setInterval(changeNews, 30000);
     </script>
 </head>
-<body onload="actualizarNoticia()">
-    <div class="header">
-        <h1>Federación de Dance Football</h1>
-    </div>
-    <div class="content">
-        <h2>Bienvenido a la Federación de Dance Football</h2>
-        <p>La Federación de Dance Football se dedica a la promoción y regulación del nuevo y emocionante deporte del Dance Football. En este sitio encontrarás las últimas noticias, las reglas oficiales del deporte, y mucho más.</p>
-        <h3>Reglas del juego</h3>
-        <p>Entra aquí para ver las <a href="rules.html">reglas oficiales del Dance Football</a>.</p>
-        <h3>Noticias</h3>
-        <div id="news">
-            <h4 id="tituloNoticia"></h4>
-            <p id="descripcionNoticia"></p>
+<body onload="changeNews()">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Federación de Dance Football</a>
+    </nav>
+
+    <main role="main" class="container">
+        <div class="starter-template">
+            <h1>Bienvenido a la Federación de Dance Football</h1>
+            <p class="lead">La Federación de Dance Football se dedica a la promoción y regulación del nuevo y emocionante deporte del Dance Football. En este sitio encontrarás las últimas noticias, las reglas oficiales del deporte, y mucho más.</p>
         </div>
-        <p>Mantente al día con las últimas <a href="news.html">noticias de Dance Football</a>.</p>
-    </div>
+        <div>
+            <h3>Noticias</h3>
+            <p id="news"></p>
+        </div>
+        <div>
+            <h3>Reglas del juego</h3>
+            <p>Entra aquí para ver las <a href="rules.html">reglas oficiales del Dance Football</a>.</p>
+        </div>
+    </main>
 </body>
 </html>
