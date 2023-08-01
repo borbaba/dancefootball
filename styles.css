@@ -29,4 +29,6 @@ body {
     color: #343a40;
 }
 
-
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+}
