@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var news = [
         {
             title: "Inauguración de la nueva temporada",
-            img: "https://www.example.com/image1.jpg",
+            img: "https://www.buzzwebzine.fr/wp-content/uploads/2018/06/disco-foot-01.jpg",
             description: "La nueva temporada de Dance Football se inaugurará la próxima semana, con equipos de todo el mundo compitiendo por la supremacía en este emocionante deporte."
         },
         // Añade aquí las demás noticias
