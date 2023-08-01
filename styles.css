@@ -34,8 +34,13 @@ body {
 }
 
 .carousel-item img {
-    max-width: 55% !important; /* Ajusta este valor según tus necesidades */
+    max-width: 70% !important; /* Ajusta este valor según tus necesidades */
     height: auto !important; /* Mantiene la relación de aspecto de la imagen */
     margin-left: auto !important; /* Centra la imagen horizontalmente */
     margin-right: auto !important; /* Centra la imagen horizontalmente */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black !important;
 }
