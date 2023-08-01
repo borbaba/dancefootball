@@ -33,9 +33,15 @@ body {
     background: rgba(0, 0, 0, 0.5) !important;
 }
 
+.carousel-item {
+    height: 400px; /* Ajusta a tu gusto */
+    overflow: hidden;
+}
+
 .carousel-item img {
     max-width: 70% !important; /* Ajusta este valor según tus necesidades */
-    height: auto !important; /* Mantiene la relación de aspecto de la imagen */
+    max-height: 400px !important; /* Ajusta a tu gusto */
+    object-fit: cover; /* Mantiene la relación de aspecto y cubre el espacio disponible */
     margin-left: auto !important; /* Centra la imagen horizontalmente */
     margin-right: auto !important; /* Centra la imagen horizontalmente */
 }
