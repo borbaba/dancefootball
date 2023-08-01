@@ -32,3 +32,11 @@ body {
 .carousel-caption {
     background: rgba(0, 0, 0, 0.5);
 }
+
+.carousel-item img {
+    max-width: 55%; /* Ajusta este valor según tus necesidades */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    margin-left: auto; /* Centra la imagen horizontalmente */
+    margin-right: auto; /* Centra la imagen horizontalmente */
+}
+
