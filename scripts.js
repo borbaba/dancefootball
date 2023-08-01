@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < news.length; i++) {
         var newsItem = document.createElement('div');
         newsItem.classList.add('carousel-item');
+        newsItem.setAttribute('data-interval', 10000);
         if (i === 0) {
             newsItem.classList.add('active');
         }
